@@ -6,6 +6,7 @@ const initialState = {
   countriesData: [],
   countrySearched: [],
   error: false,
+  searchTerm: "",
   success: false,
   message: "",
 };
@@ -20,9 +21,13 @@ export const countriesSlice = createSlice({
       state.error = false;
       state.message = "";
       state.countrySearched = [];
+      state.region = "";
     },
     setRegion: (state,action) => {
       state.region = action.payload;
+    },
+    setSearchTerm: (state,action) => {
+      state.searchTerm = action.payload
     }
 },
 extraReducers: (builder) => {
@@ -73,5 +78,5 @@ extraReducers: (builder) => {
 },
 });
 
-export const { reset, setRegion } = countriesSlice.actions;
+export const { reset, setRegion, setSearchTerm } = countriesSlice.actions;
 export default countriesSlice.reducer;

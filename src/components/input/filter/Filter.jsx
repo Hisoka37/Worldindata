@@ -4,13 +4,21 @@ import { useDispatch } from "react-redux";
 import { reset, setRegion } from "../../../Redux/countries/countriesSlice";
 
 const Filter = () => {
-  const regions = ["Africas", "America", "Asia", "Europe", "Australia"];
+  const regions = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
   const [filter, setFilter] = useState("");
   const [displayDropDown, setDisplayDropdown] = useState(false);
 
+  const dispatch = useDispatch();
   const handleDrodown = () => {
     setDisplayDropdown(!displayDropDown);
   };
+
+  useEffect (() => {
+    if (filter !== "") {
+      dispatch(setRegion(filter.toLowerCase()));
+    }
+  }, [dispatch, filter])
+
 
   return (
     <section className="filter-container">
