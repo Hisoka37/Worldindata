@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { reset } from "../../Redux/countries/countriesSlice";
 
 const CountryDetail = () => {
-  const {loading, error, countrySeatched} = useSelector(
+  const {loading, error, countrySearched} = useSelector(
     (state) => state.country
   );
   const dispatch = useDispatch();
@@ -21,57 +21,70 @@ const CountryDetail = () => {
   }, [dispatch, code, error])
   return (
     <section className="country-detail-container">
-      <div className="back-button" to="/">
-        <i className="fa-solid fa-arrow-left"></i> Back
-      </div>
+      <Link className="back-button" to="/">
+        <i className="	fa fa-arrow-left"></i> Back
+      </Link>
 
       <div className="country-detail-content">
-        <>
-          <img src="#" alt="name" className="country-detail-image" />
+        {countrySearched.length > 0 ? (
+          <>
+          <img src={countrySearched[0].flags.png} alt="name" className="country-detail-image" />
 
           <div className="country-detail-right">
-            <h1></h1>
+            <h1>{countrySearched[0].name.common}</h1>
             <div className="details">
               <div className="detail-left">
                 <p>
-                  Offcial Name: <span>{}</span>
+                  Offcial Name: <span>{countrySearched[0].name.official}</span>
                 </p>
                 <p>
-                  Population: <span>{}</span>
+                  Population: <span>{countrySearched[0].population}</span>
                 </p>
                 <p>
-                  Region: <span>{}</span>
+                  Region: <span>{countrySearched[0].region}</span>
                 </p>
 
                 <p>
-                  Sub Region: <span>{}</span>
+                  Sub Region: <span>{countrySearched[0].subregion}</span>
                 </p>
                 <p>
-                  Capital: <span>{}</span>
+                  Capital: <span>{countrySearched[0].capital}</span>
                 </p>
               </div>
 
               <div className="detail-right">
                 <p>
-                  Top Level Domain: <span>{}</span>
+                  Top Level Domain: <span>{countrySearched[0].tld[0]}</span>
                 </p>
                 <p>
                   Currencies:
-                  <span></span>
+                  <span>
+                    {Object.values(countrySearched[0].currencies)
+                    .map((item) => {
+                      return item.name;
+                    })
+                    .join(",")}
+                  </span>
                 </p>
 
                 <p>
                   Languages:
-                  <span></span>
+                  <span>
+                  {Object.values(countrySearched[0].languages)
+                    .map((item) => {
+                      return item;
+                    })
+                    .join(",")}
+                  </span>
                 </p>
               </div>
             </div>
-
-            <div className="border">
-              <p>Border Countries:</p>
-            </div>
           </div>
         </>
+        ) : (
+          <div>No data Found</div>
+        )}
+        
       </div>
     </section>
   );
