@@ -64,6 +64,7 @@
   .country-card {
     max-width: 50%;
     background-color: var(--color-white);
+
     /* background-color: bisque; */
     margin-right: 0;
     margin-bottom: 0;
@@ -71,8 +72,6 @@
     text-decoration: none;
     box-shadow: 5px 5px 10px 0 #dfd5d5;
     color: var(--light-mode-text);
-
-    
   }
 
   .country-image {
@@ -80,31 +79,34 @@
     width: 80%;
     height: 40%;
   }
+
   .arrow-image {
     display: flex;
     gap: 5px;
   }
+
   .countryheader {
     display: flex;
     align-items: flex-end;
     gap: 10px;
   }
-  
+
   .countryheader h3 {
     font-size: 20px;
   }
+
   .country-content {
     padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: end;
   }
-  
+
   .country-content p {
     margin-top: 1rem;
     font-weight: 600;
   }
-  
+
   .country-content p span {
     font-weight: 300;
   }
