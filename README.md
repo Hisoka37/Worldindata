@@ -59,7 +59,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link]
+- [Live Demo Link](https://worldindata.onrender.com/)
 - [Project Documentation](https://www.loom.com/share/6de321c38de2425b9716f4f8dbba6c67)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
