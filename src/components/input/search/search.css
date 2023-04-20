@@ -1,0 +1,48 @@
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-white);
+  width: 30%;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+.main-container.dark .search-container {
+  background-color: var(--dark-blue-elements);
+}
+
+.search-icon {
+  margin-right: 4px;
+}
+
+.main-container.dark .search-icon {
+  color: var(--color-white);
+}
+
+.search-container form {
+  flex: 1;
+}
+
+.search-input {
+  font-family: "Nunito Sans", sans-serif;
+  border: none;
+  width: 100%;
+  padding: 1rem;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+@media only screen and (max-device-width: 600px) {
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white);
+    width: 50%;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    position: relative;
+    right: 30px;
+  }
+}
