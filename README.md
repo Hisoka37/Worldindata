@@ -136,14 +136,15 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project kindly send to me an e-mail expressing it, it would make my day and fuel my motivation.
+If you appreciate this project, please send me an email to let me know. Your expression of support would brighten my day and boost my motivation.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse team for this journey.
+[ Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio) for the Amazing Design Template.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

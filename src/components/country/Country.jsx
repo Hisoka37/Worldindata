@@ -32,19 +32,19 @@ const Country = () => {
       ) : (
         data.map((item) => (
           <Link className="country-card" key={item.id} to={`/${item.cioc}`}>
-            <img
-              src={item.flags.png}
-              alt={item.flags.alt}
-              className="country-image"
-            />
+            <div className="arrow-image">
+              <img
+                src={item.flags.png}
+                alt={item.flags.alt}
+                className="country-image"
+              />
+              <i className="fa fa-arrow-circle-o-right" />
+            </div>
             <div className="country-content">
               <div className="countryheader">
                 <h3>{item.name.common}</h3>
-                <i className="fa fa-arrow-circle-o-right" />
               </div>
               <p>
-                Population:
-                {' '}
                 <span>{item.population}</span>
               </p>
             </div>
