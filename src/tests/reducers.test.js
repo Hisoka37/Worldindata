@@ -1,6 +1,6 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import  { reset, setRegion, setSearchTerm } from '../Redux/countries/countriesSlice';
+import { reset, setRegion, setSearchTerm } from '../Redux/countries/countriesSlice';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
@@ -50,4 +50,3 @@ describe('countriesSlice reducers', () => {
     expect(store.getActions()).toEqual([expectedAction]);
   });
 });
-
