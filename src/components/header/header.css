@@ -1,0 +1,12 @@
+.header {
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+  box-shadow: 5px 5px 5px #eae3e3;
+}
+
+.header h1 {
+  text-align: center;
+}
