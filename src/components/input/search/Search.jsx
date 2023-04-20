@@ -1,17 +1,17 @@
-import { useDispatch, useSelector } from "react-redux";
-import "./search.css";
-import { setSearchTerm } from "../../../Redux/countries/countriesSlice";
+import { useDispatch, useSelector } from 'react-redux';
+import './search.css';
+import { setSearchTerm } from '../../../Redux/countries/countriesSlice';
 
 const Search = () => {
-  const {searchTerm} = useSelector((state) => state.country)
+  const { searchTerm } = useSelector((state) => state.country);
   const dispatch = useDispatch();
   const handleInputValue = (e) => {
-dispatch(setSearchTerm(e.target.value.toLowerCase()));
-  }
+    dispatch(setSearchTerm(e.target.value.toLowerCase()));
+  };
   return (
     <section className="search-container">
       <div className="search-icon">
-        <i className="fa fa-search"></i>
+        <i className="fa fa-search" />
       </div>
 
       <input

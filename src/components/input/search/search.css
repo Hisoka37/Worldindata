@@ -25,22 +25,24 @@
 
 .search-input {
   font-family: "Nunito Sans", sans-serif;
-
   border: none;
   width: 100%;
-
   padding: 1rem;
-}
-
-.main-container.dark .search-input {
-  background-color: var(--dark-blue-elements);
-  color: var(--color-white);
-}
-
-.main-container.dark .search-input::placeholder {
-  color: var(--color-white);
 }
 
 .search-input:focus {
   outline: none;
+}
+
+@media only screen and (max-device-width: 600px) {
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-white);
+    width: 50%;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    position: relative;
+    right: 30px;
+  }
 }

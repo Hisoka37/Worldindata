@@ -1,14 +1,16 @@
-import { useState, useEffect } from "react";
-import "./country.css";
-import { useSelector, useDispatch } from "react-redux";
-import { displayAllcountries, searchByRegion } from "../../Redux/countries/countriesAction";
-import { reset, setSearchTerm } from "../../Redux/countries/countriesSlice";
-import { Link } from "react-router-dom";
+import { useEffect } from 'react';
+import './country.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import {
+  displayAllcountries,
+  searchByRegion,
+} from '../../Redux/countries/countriesAction';
 
 const Country = () => {
-  const { countriesData, success, loading, error, region, searchTerm } = useSelector(
-    (store) => store.country
-  );
+  const {
+    countriesData, success, loading, error, region, searchTerm,
+  } = useSelector((store) => store.country);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -21,34 +23,33 @@ const Country = () => {
     }
   }, [dispatch, error, success, region]);
 
-  const data = countriesData.filter((item) =>
-    item.name.common.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const data = countriesData.filter((item) => item.name.common.toLowerCase().includes(searchTerm.toLowerCase()));
 
   return (
     <section className="country-container">
       {loading ? (
         <h1>Loading .....</h1>
       ) : (
-        data.map((item, index) => {
-          return (
-            <Link className="country-card" key={index} to={`/${item.cioc}`}>
-              <img src={item.flags.png} alt={item.flags.alt} className="country-image" />
-              <div className="country-content">
+        data.map((item) => (
+          <Link className="country-card" key={item.id} to={`/${item.cioc}`}>
+            <img
+              src={item.flags.png}
+              alt={item.flags.alt}
+              className="country-image"
+            />
+            <div className="country-content">
+              <div className="countryheader">
                 <h3>{item.name.common}</h3>
-                <p>
-                  Population: <span>{item.population}</span>
-                </p>
-                <p>
-                  Region: <span>{item.region}</span>
-                </p>
-                <p>
-                  Capital: <span>{item.capital}</span>
-                </p>
+                <i className="fa fa-arrow-circle-o-right" />
               </div>
-            </Link>
-          );
-        })
+              <p>
+                Population:
+                {' '}
+                <span>{item.population}</span>
+              </p>
+            </div>
+          </Link>
+        ))
       )}
     </section>
   );

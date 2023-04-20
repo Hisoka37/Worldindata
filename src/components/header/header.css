@@ -7,28 +7,6 @@
   box-shadow: 5px 5px 5px #eae3e3;
 }
 
-.main-container.dark .header {
-  background-color: var(--dark-blue-elements);
-  box-shadow: 5px 5px 5px #0b0b0b;
-  color: var(--color-white);
-}
-
-.theme-light {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.theme-light i {
-  margin-right: 5px;
-}
-
-.theme-dark {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.theme-dark i {
-  margin-right: 5px;
+.header h1 {
+  text-align: center;
 }
