@@ -37,10 +37,12 @@
     <li><a href="">Redux</a></li>
     <li><a href="">HTML/CSS/a></li>
   </ul>
+  <details>
   <summary>API</summary>
   <ul>
-    <li><a href="">[Rest Countries](https://restcountries.com/#rest-countries)</a></li>
+    <li><a href="https://restcountries.com/#rest-countries">Rest Countries</a></li>
   </ul>
+  </details>
 </details>
 
 ### Key Features <a name="key-features"></a>
